@@ -1,0 +1,21 @@
+body {
+  background: radial-gradient(#fff, #eee);
+}
+
+.container {
+  margin: 5px auto;
+  width: 90%;
+}
+
+header {
+  text-align: center;
+}
+
+audio {
+  border: 5px solid ;
+}
+
+.music-player {
+  border-radius: 7px;
+  width: 100%;
+}
