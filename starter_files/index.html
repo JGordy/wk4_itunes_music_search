@@ -6,19 +6,22 @@
 </head>
 <body>
   <div class="container">
-    <header>
-      <h1>Really Awesome Music Site</h1>
-    </header>
-    <section class="player">
-      <audio class="music-player" controls="controls" src=""></audio>
-    </section>
-    <section class="search">
-      <form class="search-form">
-        <input type="search" name="" value="" placeholder="">
-        <input type="submit" name="" value="Submit">
-      </form>
-    </section>
-    <section class="results"></section>
+    <div class="top_container">
+      <header>
+        <h1>Really Awesome Music Site</h1>
+      </header>
+      <section class="search">
+        <form class="search-form">
+          <input id="searchInput" type="search" name="search" value="" placeholder="Search keyword here">
+          <input id="submitButton" type="submit" name="submit" value="Submit">
+        </form>
+      </section>
+      <section class="player">
+        <audio class="music-player" controls="controls" src=""></audio>
+      </section>
+    </div>
+
+    <section id="results"></section>
   </div>
   <script src="main.js"></script>
 </body>

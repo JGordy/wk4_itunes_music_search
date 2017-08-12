@@ -1,5 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  background: radial-gradient(#fff, #eee);
+  background: radial-gradient(circle, #fff 20%, #ccc);
 }
 
 .container {
@@ -7,8 +12,28 @@ body {
   width: 90%;
 }
 
+.top_container {
+  /*background-image: url(./images/audio-cassette.png);*/
+  background-position: center;
+  background-repeat: no-repeat;
+  /*height: 600px;*/
+}
+
 header {
   text-align: center;
+}
+
+h1 {
+  padding-top: 70px;
+}
+
+.player {
+  border-bottom: 2px solid gray;
+  display: flex;
+  justify-content: center;
+  /*margin-top: 155px;*/
+  padding-bottom: 20px;
+
 }
 
 audio {
@@ -17,5 +42,49 @@ audio {
 
 .music-player {
   border-radius: 7px;
-  width: 100%;
+  margin: 10px auto;
+  width: 80%;
+}
+
+.search-form {
+  /*border-bottom: 2px solid gray;*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 0px 30px 0px;
+}
+
+input {
+  padding: 10px;
+}
+
+input[type=search] {
+  -webkit-appearance: textfield;
+  width: 45%;
+  height: 40px;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+input[type=submit] {
+  -webkit-appearance: none;
+  border: none;
+  font-size: 18px;
+  margin-top: 30px;
+  padding: 10px 30px;
+}
+
+#results {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.songContainer {
+  /*background-color: #fff;*/
+  border: 2px solid #eee;
+  border-radius: 4px;
+  box-shadow:  0px 0px 10px rgba(2, 6, 0, 0.8);
+  flex: 1 1 15%;
+  height: 200px;
+  margin: 15px;
 }
