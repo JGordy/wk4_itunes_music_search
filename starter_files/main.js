@@ -4,7 +4,7 @@
 // 5. Create a way to listen for a click that will play the song in the audio player
 
 let results = document.getElementById("results");
-let  music_player = document.getElementsByClassName("music-player");
+
 let submit = document.getElementById("submitButton");
 
 submit.addEventListener("click", function() {
@@ -26,7 +26,7 @@ submit.addEventListener("click", function() {
           return;
         }
         response.json().then(function(data) {
-          console.log("Here is the data:", data.results);
+          console.log("Here is the data:", data);
 
           for (var i = 0; i < data.results.length; i++) {
             let songContainer =   document.createElement("div");
@@ -46,10 +46,26 @@ submit.addEventListener("click", function() {
 
             bandName.textContent = `${data.results[i].artistName}`;
 
-            songContainer.addEventListener("click", function(event) {
+            //  let index = i;
+// console.log(data.results[i].previewUrl);
+albumImage.value = i;
+// console.log(albumImage.value);
+            albumImage.addEventListener("click", function(event) {
               console.log(event);
-              music_player.setAttribute("src", `${data.results[i].previewUrl}`)
+              console.log(event.target);
+console.log(event.target.value);
+              playSong(event.target.value);
             })
+            function playSong(index) {
+              let musicPlayer = document.getElementById("music-player");
+              console.log(musicPlayer);
+              let selectedSong =  data.results[index].previewUrl;
+              console.log(selectedSong);
+              musicPlayer.setAttribute("src", selectedSong);
+              console.log(musicPlayer.src);
+              musicPlayer.load();
+              musicPlayer.play();
+            }
           }
         });
       }
