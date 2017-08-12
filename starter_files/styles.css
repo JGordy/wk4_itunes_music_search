@@ -5,6 +5,7 @@
 
 body {
   background: radial-gradient(circle, #fff 20%, #ccc);
+  font-family: sans-serif;
 }
 
 .container {
@@ -74,17 +75,38 @@ input[type=submit] {
   padding: 10px 30px;
 }
 
+/***********************************
+        Song Container Styling
+************************************/
+
 #results {
   display: flex;
   flex-flow: row wrap;
+  margin-top: 20px;
 }
 
 .songContainer {
   /*background-color: #fff;*/
-  border: 2px solid #eee;
-  border-radius: 4px;
-  box-shadow:  0px 0px 10px rgba(2, 6, 0, 0.8);
+  /*border-top: 2px solid gray;*/
+  border-bottom: 2px solid gray;
+  /*border-radius: 4px;*/
+  /*box-shadow:  0px 0px 10px rgba(2, 6, 0, 0.8);*/
   flex: 1 1 15%;
   height: 200px;
   margin: 15px;
+  text-align: center;
 }
+
+img {
+  width: 80%;
+  height: 65%;
+}
+ .songContainer p {
+   margin: 10px 0px;
+   color: darkcyan;
+ }
+
+ .songContainer h5 {
+  text-transform: uppercase;
+  color: gray;
+ }
