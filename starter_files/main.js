@@ -11,6 +11,18 @@ submit.addEventListener("click", function() {
   let searchInput = document.getElementById("searchInput");
   let str = searchInput.value.split(" ").join("+");
   let searchEntry = "https://itunes.apple.com/search?term=" + str + "&entity=song&limit=15";
+//  trying new thing
+  let main_container = document.querySelector(".main_container");
+  main_container.style.height = "395px";
+  console.log(main_container.style);
+
+  let searchResults = document.getElementById("results");
+searchResults.style.paddingtop = "80px";
+searchResults.style.margintop = "80px";
+
+
+  let musicPlayer = document.getElementById("music-player");
+  musicPlayer.style.marginbottom = "50px";
 
   fetch(searchEntry)
     .then(
@@ -21,7 +33,7 @@ submit.addEventListener("click", function() {
         }
         response.json().then(function(data) {
 
-          for (var i = 0; i < data.results.length; i++) {
+          for (var i = 1; i < data.results.length; i++) {
             let songContainer =   document.createElement("div");
             songContainer.setAttribute("class", "songContainer")
 
@@ -46,7 +58,7 @@ submit.addEventListener("click", function() {
               playSong(event.target.value);
             })
             function playSong(index) {
-              let musicPlayer = document.getElementById("music-player");
+//  removed musicplayer temporarily
 
               let selectedSong =  data.results[index].previewUrl;
 
@@ -64,3 +76,26 @@ submit.addEventListener("click", function() {
     });
   }
 );
+
+// slideshow function
+let container = document.getElementById("headphones");
+ console.log(container.id);
+
+function changeBackground() {
+ if (container.id === "headphones") {
+   container.id = "vinyl";
+   container.style.transition = "1.6s ease-in-out";
+ } else if (container.id === "vinyl") {
+   container.id = "radio";
+   container.style.transition = "1.6s ease-in-out";
+ } else if (container.id === "radio") {
+   container.id = "mic";
+   container.style.transition = "1.6s ease-in-out";
+ } else {
+   container.id = "headphones";
+   container.style.transition = "1.6s ease-in-out";
+ }
+ setTimeout(changeBackground, 4000);
+}
+
+setTimeout(changeBackground, 4000);
