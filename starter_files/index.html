@@ -5,21 +5,20 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- <header>
-    <h1>Really Awesome Music Site</h1>
-  </header> -->
   <div class="main_container" id="headphones">
-    <div class="top_container">
+    <section class="player">
+      <audio id="music-player" controls="controls" loop></audio>
+    </section>
+    <header>
+      <h1>My•Hi•fi</h1>
+    </header>
       <section class="search">
         <div class="search-form">
           <input id="searchInput" type="search" name="search" value="" placeholder="Search keyword here">
           <input id="submitButton" type="submit" name="submit" value="Submit">
         </div>
       </section>
-    </div>
-    <section class="player">
-      <audio id="music-player" controls="controls" loop></audio>
-    </section>
+
   </div>
     <section id="results"></section>
   </div>

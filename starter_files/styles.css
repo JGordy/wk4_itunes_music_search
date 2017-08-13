@@ -8,6 +8,11 @@ body {
   font-family: sans-serif;
 }
 
+.main_container {
+  display: flex;
+  height: 800px;
+}
+
 /* background styling slideshow */
 
 #headphones {
@@ -106,13 +111,13 @@ begin transition effects
 end transition effects
 ******************************/
 
-.top_container {
+/*.top_container {
   background-position: center;
   background-repeat: no-repeat;
-}
+}*/
 
 header {
-  background-color: black;
+  background-color: transparent;
   color: white;
   text-align: center;
   width: 100%;
@@ -120,10 +125,12 @@ header {
 }
 
 h1 {
-  padding: 20px 0px;
+  padding: 10px 0px;
   text-align: center;
   width: 100%;
-  text-shadow: 3px 3px 0px rgba(150, 150, 150, 0.5);
+  text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.5);
+  letter-spacing: 0.6em;
+  text-transform: uppercase;
 }
 
 .player {
@@ -140,37 +147,52 @@ audio {
 
 #music-player {
   border-radius: 7px;
-  margin: 150px auto;
-  width: 80%;
+  /*margin: 0px auto;*/
+  width: 425px;
+  margin-top: 10px;
+  margin-left: 20px;
+  opacity: 0.7;
 }
 
 .search-form {
   /*border-bottom: 2px solid gray;*/
   display: flex;
-  flex-direction: column;
   align-items: center;
   padding: 0px 0px 30px 0px;
+  margin-top: 10px;
+  margin-right: 20px;
 }
 
 input {
   padding: 10px;
+  /*background: transparent;*/
 }
 
 input[type=search] {
   -webkit-appearance: textfield;
-  border: 3px solid black;
-  width: 350px;
+  border: 5px solid black;
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+  width: 425px;
   height: 40px;
-  font-size: 18px;
-  margin-top: 105px;
+  font-size: 15px;
+  opacity: 0.7;
+  border-right: none;
+  /*margin-top: 105px;*/
 }
 
 input[type=submit] {
   -webkit-appearance: none;
   border: none;
-  font-size: 18px;
-  margin-top: 30px;
-  padding: 10px 30px;
+  border: 5px solid black;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+  font-size: 12px;
+  /*margin-top: 30px;*/
+  opacity: 0.7;
+  padding: 7px 10px 8px 10px;
+  margin-left: -65px;
+  /*z-index: 11;*/
 }
 
 /***********************************
@@ -186,6 +208,7 @@ input[type=submit] {
 .songContainer {
   align-items: center;
   border-bottom: 2px solid gray;
+  border-radius: 5%;
   display: flex;
   flex-flow: column nowrap;
   flex: 1 1 15%;

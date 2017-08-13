@@ -10,11 +10,10 @@ submit.addEventListener("click", function() {
 
   let searchInput = document.getElementById("searchInput");
   let str = searchInput.value.split(" ").join("+");
-  let searchEntry = "https://itunes.apple.com/search?term=" + str + "&entity=song&limit=15";
+  let searchEntry = "https://itunes.apple.com/search?term=" + str + "&entity=song&limit=16";
 //  trying new thing
   let main_container = document.querySelector(".main_container");
   main_container.style.height = "395px";
-  console.log(main_container.style);
 
   let searchResults = document.getElementById("results");
 searchResults.style.paddingtop = "80px";
@@ -58,7 +57,6 @@ searchResults.style.margintop = "80px";
               playSong(event.target.value);
             })
             function playSong(index) {
-//  removed musicplayer temporarily
 
               let selectedSong =  data.results[index].previewUrl;
 
