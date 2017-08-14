@@ -16,13 +16,13 @@ submit.addEventListener("click", function() {
   main_container.style.height = "395px";
 
   let searchResults = document.getElementById("results");
-searchResults.style.paddingtop = "80px";
-searchResults.style.margintop = "80px";
-
+  searchResults.style.paddingtop = "80px";
+  searchResults.style.margintop = "80px";
 
   let musicPlayer = document.getElementById("music-player");
   musicPlayer.style.marginbottom = "50px";
-
+//  end of new thing
+// fetch call
   fetch(searchEntry)
     .then(
       function(response) {
@@ -52,7 +52,7 @@ searchResults.style.margintop = "80px";
 
             albumImage.value = i;
 
-            albumImage.addEventListener("click", function(event) {
+            albumImage.addEventListener("click",      function(event) {
 
               playSong(event.target.value);
             })

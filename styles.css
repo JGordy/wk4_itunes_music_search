@@ -13,7 +13,9 @@ body {
   height: 800px;
 }
 
-/* background styling slideshow */
+/*******************************
+ background styling slideshow
+ *******************************/
 
 #headphones {
   background-image: url(./images/pink_headphones.jpg);
@@ -76,7 +78,7 @@ body {
 }
 
 /*****************************
-begin transition effects
+   begin transition effects
 ******************************/
 
 @keyframes fadein {
@@ -108,7 +110,7 @@ begin transition effects
     to   { opacity: 1; }
 }
 /*****************************
-end transition effects
+    end transition effects
 ******************************/
 
 /*.top_container {
@@ -134,11 +136,8 @@ h1 {
 }
 
 .player {
-  /*border-bottom: 2px solid gray;*/
   display: flex;
   justify-content: center;
-  /*margin-top: 155px;*/
-  /*padding-bottom: 20px;*/
 }
 
 audio {
@@ -147,7 +146,6 @@ audio {
 
 #music-player {
   border-radius: 7px;
-  /*margin: 0px auto;*/
   width: 425px;
   margin-top: 10px;
   margin-left: 20px;
@@ -155,7 +153,6 @@ audio {
 }
 
 .search-form {
-  /*border-bottom: 2px solid gray;*/
   display: flex;
   align-items: center;
   padding: 0px 0px 30px 0px;
@@ -165,7 +162,6 @@ audio {
 
 input {
   padding: 10px;
-  /*background: transparent;*/
 }
 
 input[type=search] {
@@ -178,7 +174,6 @@ input[type=search] {
   font-size: 15px;
   opacity: 0.7;
   border-right: none;
-  /*margin-top: 105px;*/
 }
 
 input[type=submit] {
@@ -188,11 +183,9 @@ input[type=submit] {
   border-top-right-radius: 7px;
   border-bottom-right-radius: 7px;
   font-size: 12px;
-  /*margin-top: 30px;*/
   opacity: 0.7;
   padding: 7px 10px 8px 10px;
   margin-left: -65px;
-  /*z-index: 11;*/
 }
 
 /***********************************
@@ -203,6 +196,7 @@ input[type=submit] {
   display: flex;
   flex-flow: row wrap;
   margin-top: 20px;
+  z-index: 1000;
 }
 
 .songContainer {
@@ -231,6 +225,7 @@ img {
 img:hover {
   cursor: pointer;
 }
+
  .songContainer p {
    margin: 10px 0px;
    color: darkcyan;
