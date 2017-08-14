@@ -11,7 +11,7 @@ submit.addEventListener("click", function() {
   let searchInput = document.getElementById("searchInput");
   let str = searchInput.value.split(" ").join("+");
   let searchEntry = "https://itunes.apple.com/search?term=" + str + "&entity=song&limit=16";
-//  trying new thing
+//  trying a new thing
   let main_container = document.querySelector(".main_container");
   main_container.style.height = "395px";
 
