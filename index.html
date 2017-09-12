@@ -2,22 +2,24 @@
 <html>
 <head>
   <title>iTunes Music Search</title>
+  <meta name="viewport" content="initial-scale=1">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="main_container" id="headphones">
+  <header>
     <section class="player">
       <audio id="music-player" controls="controls" loop></audio>
     </section>
-    <header>
-      <h1>My•Hi•fi</h1>
-    </header>
+    <h1>My Hi fi</h1>
     <section class="search">
       <div class="search-form">
-        <input id="searchInput" type="search" name="search" value="" placeholder="Search keyword here">
+        <input id="searchInput" type="search" name="search" placeholder="Search keyword here" autofocus>
         <input id="submitButton" type="submit" name="submit" value="Submit">
       </div>
     </section>
+  </header>
+  <div class="main_container" id="headphones">
+
   </div>
     <section id="results"></section>
   </div>

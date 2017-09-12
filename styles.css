@@ -25,11 +25,11 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 
-  -webkit-animation: fadein 2s;
+  /*-webkit-animation: fadein 2s;
   -moz-animation: fadein 2s;
   -ms-animation: fadein 2s;
   -o-animation: fadein 2s;
-  animation: fadein 2s;
+  animation: fadein 2s;*/
 }
 
 #vinyl {
@@ -40,11 +40,11 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 
-  -webkit-animation: fadein 2s;
+  /*-webkit-animation: fadein 2s;
   -moz-animation: fadein 2s;
   -ms-animation: fadein 2s;
   -o-animation: fadein 2s;
-  animation: fadein 2s;
+  animation: fadein 2s;*/
 }
 
 #radio {
@@ -55,11 +55,11 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 
-  -webkit-animation: fadein 2s;
+  /*-webkit-animation: fadein 2s;
   -moz-animation: fadein 2s;
   -ms-animation: fadein 2s;
   -o-animation: fadein 2s;
-  animation: fadein 2s;
+  animation: fadein 2s;*/
 }
 
 #mic {
@@ -70,11 +70,11 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 
-  -webkit-animation: fadein 2s;
+  /*-webkit-animation: fadein 2s;
   -moz-animation: fadein 2s;
   -ms-animation: fadein 2s;
   -o-animation: fadein 2s;
-  animation: fadein 2s;
+  animation: fadein 2s;*/
 }
 
 /*****************************
@@ -113,20 +113,19 @@ body {
     end transition effects
 ******************************/
 
-/*.top_container {
-  background-position: center;
-  background-repeat: no-repeat;
-}*/
-
 header {
   background-color: transparent;
-  color: white;
-  text-align: center;
-  width: 100%;
-  /*z-index: 1000;*/
+  display: flex;
+  position: fixed;
+  top: 0;
+  overflow: hidden;
 }
 
 h1 {
+  color: white;
+  margin-left: 20px;
+  text-align: center;
+  width: 100%;
   padding: 10px 0px;
   text-align: center;
   width: 100%;
@@ -135,13 +134,9 @@ h1 {
   text-transform: uppercase;
 }
 
-.player {
-  display: flex;
-  justify-content: center;
-}
-
 audio {
-  border: 5px solid ;
+  /*border: 5px solid ;*/
+  height: 35px;
 }
 
 #music-player {
@@ -166,7 +161,7 @@ input {
 
 input[type=search] {
   -webkit-appearance: textfield;
-  border: 5px solid black;
+  border: none;
   border-top-left-radius: 7px;
   border-bottom-left-radius: 7px;
   width: 425px;
@@ -178,14 +173,15 @@ input[type=search] {
 
 input[type=submit] {
   -webkit-appearance: none;
+  background-color: rgba(255, 255, 255, 0.9);
   border: none;
-  border: 5px solid black;
   border-top-right-radius: 7px;
   border-bottom-right-radius: 7px;
   font-size: 12px;
   opacity: 0.7;
-  padding: 7px 10px 8px 10px;
-  margin-left: -65px;
+  padding: 12px 10px 13px 10px;
+  /*margin-left: -25px;*/
+  z-index: 2;
 }
 
 /***********************************
@@ -196,7 +192,7 @@ input[type=submit] {
   display: flex;
   flex-flow: row wrap;
   margin-top: 20px;
-  z-index: 1000;
+  z-index: 1;
 }
 
 .songContainer {
@@ -226,12 +222,84 @@ img:hover {
   cursor: pointer;
 }
 
- .songContainer p {
-   margin: 10px 0px;
-   color: darkcyan;
- }
+.songContainer p {
+ margin: 10px 0px;
+ color: darkcyan;
+}
 
- .songContainer h5 {
-  text-transform: uppercase;
-  color: gray;
- }
+.songContainer h5 {
+text-transform: uppercase;
+color: gray;
+}
+
+/******************************
+       mobile styling
+*******************************/
+
+@media screen and (max-width: 600px) {
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  flex-direction: column;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0px;
+  text-align: center;
+}
+
+.player {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+}
+
+.search-form {
+  margin: 0px;
+}
+
+.search {
+  margin: 0px;
+  width: 80%;
+}
+
+input[type=search] {
+  opacity: 1.0;
+}
+
+input[type=submit] {
+  background-color: white;
+  opacity: 1.0;
+}
+
+#music-player {
+  margin: 0px;
+  opacity: 1.0;
+  width: 100%;
+}
+
+#results {
+  flex-direction: column;
+}
+
+.songContainer {
+  border-radius: 0px;
+  flex-flow: row;
+  height: 60px;
+  justify-content: space-between;
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0px 5px;
+}
+
+img {
+  height: 100%;
+  width: 20%;
+}
+
+}

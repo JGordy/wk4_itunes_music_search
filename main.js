@@ -1,7 +1,7 @@
 
 // 2. Create your `submit` event for getting the user's search term
 
-let results = document.getElementById("results");
+// let results = document.getElementById("results");
 let submit = document.getElementById("submitButton");
 
 submit.addEventListener("click", function() {
@@ -13,7 +13,7 @@ submit.addEventListener("click", function() {
   let searchEntry = "https://itunes.apple.com/search?term=" + str + "&entity=song&limit=16";
 //  trying a new thing
   let main_container = document.querySelector(".main_container");
-  main_container.style.height = "395px";
+  main_container.style.height = "340px";
 
   let searchResults = document.getElementById("results");
   searchResults.style.paddingtop = "80px";
