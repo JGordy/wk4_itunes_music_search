@@ -297,7 +297,7 @@ input[type=submit] {
 
 #results {
   flex-direction: column;
-  padding-bottom: 30px;
+  padding-bottom: 45px;
 }
 
 .songContainer {
