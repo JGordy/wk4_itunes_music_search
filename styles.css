@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+input:focus, button:focus {
+  outline-width: 0;
+}
+
 body {
   background: radial-gradient(circle, #fff 20%, #ccc);
   font-family: sans-serif;
@@ -261,11 +265,15 @@ header h1 {
 
 .search-form {
   margin: 0px;
+  padding: 0px;
 }
 
 .search {
+  border: 3px solid black;
+  border-radius: 10px;
   margin: 0px auto;
-  width: 80%;
+  padding: 0px;
+  width: 90%;
 }
 
 input[type=search] {
@@ -285,6 +293,7 @@ input[type=submit] {
 
 #results {
   flex-direction: column;
+  padding-bottom: 30px;
 }
 
 .songContainer {
